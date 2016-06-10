@@ -6,11 +6,11 @@ gem 'rails', '4.2.2'
 # bootstrap sass
 gem 'bootstrap-sass', '3.2.0.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.2'
+gem 'sass-rails', '5.0.2'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 2.5.3'
+gem 'uglifier', '2.5.3'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '4.1.0'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -22,10 +22,18 @@ gem 'turbolinks', '2.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.2.3'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '3.1.7'
+
+gem 'faker', '1.4.2'
+gem 'carrierwave', '0.10.0'
+gem 'mini_magick', '3.8.0'
+gem 'fog', '1.36.0'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -40,7 +48,7 @@ group :development, :test do
   gem 'byebug', '3.4.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0.0.beta3'
+  gem 'web-console', '2.0.0.beta3'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '1.1.3'
@@ -55,5 +63,5 @@ end
 group :production do
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma', '2.11.1'
+  gem 'puma', '3.1.0'
 end
