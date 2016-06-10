@@ -51,4 +51,9 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
   
+  # will the app throw an error if you log into two separate browsers, log out on one, then log out of the other?
+  test "authenticated? should return false for a user with a nil digest" do
+    assert_not @user.authenticated?('')
+  end
+  
 end
