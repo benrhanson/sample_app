@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         log_in user
         # checks to see if the user wants to be remembered. 
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-        redirect_to user
+        redirect_back_or user
       else
         # create an error message; flash.now ensures it won't remain in the flash after the render 'new'
         flash.now[:danger] = "Invalid email/password cominbation. Please try again!" #not quite right
